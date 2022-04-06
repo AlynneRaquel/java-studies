@@ -12,6 +12,7 @@ public class funcoesString {
 		String substituirStringIniFim = original.substring(2, 9);
 		String trocaCaracter = original.replace('a', 'x');
 		String trocaSubstring = original.replace("abc", "xy");
+		
 		int posicaoDaLetra = original.indexOf("bc");
 		int posicaoFinalDaLetra = original.lastIndexOf("bc");
 		
