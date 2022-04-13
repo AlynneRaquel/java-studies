@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class matrizProposedExcercise {
+public class MatrizProposedExcercise {
 
 	public static void main(String[] args) {
 

@@ -1,5 +1,5 @@
 
-public class functionForEach {
+public class FunctionForEach {
 
 	public static void main(String[] args) {
 		

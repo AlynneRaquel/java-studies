@@ -1,5 +1,5 @@
 
-public class functionSplit {
+public class FunctionSplit {
 
 	public static void main(String[] args) {
 		

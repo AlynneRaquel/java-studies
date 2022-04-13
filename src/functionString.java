@@ -1,5 +1,5 @@
 
-public class functionString {
+public class FunctionString {
 
 	public static void main(String[] args) {
 		
