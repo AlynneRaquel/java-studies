@@ -21,6 +21,11 @@ public class ListProgram {
 			System.out.println("Employee #" + (i + 1) + ":");
 			System.out.print("id: ");
 			Integer id = sc.nextInt();
+			while (hasId(list,id)) {
+				System.out.println("Id already taken! Try again");
+				id = sc.nextInt();
+			}
+			
 			System.out.print("Name: ");
 			sc.nextLine();
 			String name = sc.nextLine();
@@ -35,20 +40,27 @@ public class ListProgram {
 		System.out.println();
 		System.out.println("Enter the employee id that will have salary increase");
 		int idSalary = sc.nextInt();
-		Integer pos = position(list, idSalary);
-		if (pos == null) {
+		//BUSCA POR LAMBDA
+		ListEmployee emp = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
+		
+		
+		/* BUSCA POR FUNÇÃO 
+		//Integer pos = position(list, idSalary); 
+		*/
+		
+		if (emp == null) {
 			System.out.println("This id does not exist");		
 		} 
 		else {
 			System.out.println("Enter the percentage");
 			double percent = sc.nextDouble();
-			list.get(pos).increaseSalary(percent);
+			emp.increaseSalary(percent);
 		}
 		
 		System.out.println();
 		System.out.println("List of Employee");
-		for(ListEmployee emp : list) {
-			System.out.println(emp);
+		for(ListEmployee e : list) {
+			System.out.println(e);
 		}
 		
 		sc.close();
@@ -63,6 +75,12 @@ public class ListProgram {
 			}
 		}
 		return null;
+	}
+	
+	//Função Lambda
+	public static boolean hasId(List<ListEmployee> list , int id) {
+		ListEmployee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+		return emp != null;
 	}
 
 }
