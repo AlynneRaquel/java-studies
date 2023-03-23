@@ -1,0 +1,14 @@
+package com.algaworks.repository;
+
+import java.math.BigDecimal;
+
+import com.algaworks.model.Caminhao;
+import com.algaworks.model.Motorista;
+import com.algaworks.model.Seguro;
+
+public class Motoristas {
+	
+	Seguro seguro = new Seguro("Parcial - Não cobre Roubo", new BigDecimal("5000"));
+	Caminhao caminhao = new Caminhao("Mercedes Atron", seguro);
+	Motorista motoristaJoao = new Motorista("João", 40, caminhao);
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.algaworks.PedidoVendaTest&apos; to &apos;PedidoTest&apos;&#x0D;&#x0A;- Original project: &apos;pedido-venda&apos;&#x0D;&#x0A;- Original element: &apos;com.algaworks.PedidoVendaTest&apos;&#x0D;&#x0A;- Renamed element: &apos;com.algaworks.PedidoTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PedidoVendaTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/test&lt;com.algaworks{PedidoVendaTest.java[PedidoVendaTest" matchStrategy="1" name="PedidoTest" qualified="false" references="true" similarDeclarations="false" stamp="1650376783445" textual="false" version="1.0"/>
+</session>

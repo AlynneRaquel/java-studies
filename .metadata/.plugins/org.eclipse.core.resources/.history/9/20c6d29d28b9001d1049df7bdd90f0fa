@@ -1,0 +1,10 @@
+package com.algaworks.model;
+
+public class Caminhao {
+	
+	private String modelo;
+	private Seguro seguro;
+	
+	
+
+}

@@ -1,0 +1,10 @@
+package com.algaworks.model;
+
+import java.math.BigDecimal;
+
+public class Seguro {
+	
+	private String cobertura;
+	private BigDecimal valorFranquia;
+
+}

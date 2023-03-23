@@ -1,0 +1,11 @@
+package com.algaworks.model;
+
+public class Motorista {
+	
+	private String nome;
+	private Integer idade;
+	private Caminhao caminhao;
+	
+	
+
+}

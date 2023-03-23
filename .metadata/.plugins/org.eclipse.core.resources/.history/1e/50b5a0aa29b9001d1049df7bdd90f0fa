@@ -1,0 +1,11 @@
+package com.algaworks.repository;
+
+import java.math.BigDecimal;
+
+import com.algaworks.model.Seguro;
+
+public class Motoristas {
+	
+	var seguro = new Seguro("Parcial - Não cobre Roubo", new BigDecimal("5000"));
+
+}

@@ -1,0 +1,9 @@
+package com.algaworks.repository;
+
+import com.algaworks.model.Seguro;
+
+public class Motoristas {
+	
+	Seguro seguro = New Seguro("Parcial - Não cobre Tudo ", BigDecimal("5000"));
+
+}
