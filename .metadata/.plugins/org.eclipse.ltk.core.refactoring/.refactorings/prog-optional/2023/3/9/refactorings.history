@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.algaworks.application.ConsultaCoberturaOptional&apos; to &apos;ConsultaCoberturaTeste&apos;&#x0D;&#x0A;- Original project: &apos;prog-optional&apos;&#x0D;&#x0A;- Original element: &apos;com.algaworks.application.ConsultaCoberturaOptional&apos;&#x0D;&#x0A;- Renamed element: &apos;com.algaworks.application.ConsultaCoberturaTeste&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConsultaCoberturaOptional&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.algaworks.application{ConsultaCoberturaOptional.java[ConsultaCoberturaOptional" matchStrategy="1" name="ConsultaCoberturaTeste" qualified="false" references="true" similarDeclarations="false" stamp="1677787943805" textual="false" version="1.0"/>
-</session>

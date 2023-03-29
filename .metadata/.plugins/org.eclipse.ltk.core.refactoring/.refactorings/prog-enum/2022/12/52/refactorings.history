@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;entities.enums.OrdersStatus&apos; to &apos;OrderStatus&apos;&#x0D;&#x0A;- Original project: &apos;prog-enum&apos;&#x0D;&#x0A;- Original element: &apos;entities.enums.OrdersStatus&apos;&#x0D;&#x0A;- Renamed element: &apos;entities.enums.OrderStatus&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;OrdersStatus&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;entities.enums{OrdersStatus.java[OrdersStatus" matchStrategy="1" name="OrderStatus" qualified="false" references="true" similarDeclarations="false" stamp="1671577104302" textual="false" version="1.0"/>
-</session>
