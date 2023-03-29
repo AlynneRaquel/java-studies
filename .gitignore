@@ -24,11 +24,12 @@ hs_err_pid*
 
 # Eclipse
 .settings/
+*/.settings/*
 .metadata/
+*/.metadata/*
 .DS_Store
 */.classpath
 */.project
-*/.settings/*
 bin/
 target/
 
