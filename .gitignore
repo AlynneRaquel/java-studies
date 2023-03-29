@@ -24,3 +24,24 @@ hs_err_pid*
 
 # Eclipse
 .settings/
+.DS_Store
+*/.classpath
+*/.project
+*/.settings/*
+bin/
+target/
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
