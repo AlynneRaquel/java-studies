@@ -1,14 +1,14 @@
 package entities;
 
 public class Product {
-	
+
 	private String name;
 	private Double price;
-	
+
 	public Product() {
 	}
 
-	public Product(String name, Double  price) {
+	public Product(String name, Double price) {
 		this.name = name;
 		this.price = price;
 	}
@@ -21,24 +21,21 @@ public class Product {
 		this.name = name;
 	}
 
-	public Double  getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	
-	//segunda forma
-	public static boolean staticProductPredicate(Product p) {
-		return p.getPrice() >= 100.00;
+
+	public String nonStaticUpperCaseName() {
+		return name.toUpperCase();
 	}
-	
-	//terceira forma
-	public  boolean nonStaticProductPredicate() {
-		return price >= 100.00;
+
+	public static String staticUppercaseName(Product p) {
+		return p.getName().toUpperCase();
 	}
-	
 
 	@Override
 	public String toString() {

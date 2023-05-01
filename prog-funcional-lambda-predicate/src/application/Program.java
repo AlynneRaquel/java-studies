@@ -2,11 +2,9 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
+import java.util.function.Predicate;
 
 import entities.Product;
-import util.UpperCaseName;
 
 public class Program {
 
@@ -21,22 +19,28 @@ public class Program {
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("HD Case", 80.00));
 		
-		//Quinta forma Expressão Lambda inline
-		List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+		//quinta forma inline
+		Double minimo = 100.00;
+		list.removeIf( p -> p.getPrice() >= minimo);
 		
-		//Quarta forma Expressão Lambda Declarada
-		 //Function<Product, String> func = p -> p.getName().toUpperCase();
-		 //List<String> names = list.stream().map(func).collect(Collectors.toList());
-				
-		//Terceira forma referência com method não estático(classe product)
-		 //List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
+		//quarta forma , expressão lambda declarada
+		Double min = 100.00;
+		Predicate<Product> pred = p -> p.getPrice() >= min;
+		list.removeIf(pred);
 		
-		//Segunda forma reference method com método estático(classe product)
-		 //List<String> names = list.stream().map(Product::staticUppercaseName).collect(Collectors.toList());
+		//terceira forma method não estático
+		//list.removeIf(Product::nonStaticProductPredicate);
 		
-		//Primeira forma usando a classe que extend consumer(implementação de interface)
-		  //List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
-		 
-		 names.forEach(System.out::println);
+		//segunda forma method estático
+		//list.removeIf(Product::staticProductPredicate);
+		
+		//primeira forma usando a classe ProductPredicate implementação de interface
+		//list.removeIf(new ProductPredicate());
+		
+		for(Product p : list) {
+			System.out.println(p);
+		}
+		
 	}
+
 }

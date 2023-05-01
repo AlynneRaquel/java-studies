@@ -2,10 +2,11 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import entities.Product;
-import util.PriceUpdate;
+import util.UpperCaseName;
 
 public class Program {
 
@@ -21,29 +22,21 @@ public class Program {
 		list.add(new Product("HD Case", 80.00));
 		
 		//Quinta forma Expressão Lambda inline
-		double factor = 1.1;
-		
-		list.forEach(produto -> produto.setPrice(produto.getPrice() * factor));
+		List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 		
 		//Quarta forma Expressão Lambda Declarada
-		/**double factor = 1.1;
-		
-		Consumer<Product> cons = p -> {
-			p.setPrice(p.getPrice() * factor);
-		};
-		
-		list.forEach(cons);**/
-		
-		
+		 //Function<Product, String> func = p -> p.getName().toUpperCase();
+		 //List<String> names = list.stream().map(func).collect(Collectors.toList());
+				
 		//Terceira forma referência com method não estático(classe product)
-		 //list.forEach(Product::nonStaticPriceUpdate);
+		 //List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 		
 		//Segunda forma reference method com método estático(classe product)
-		 //list.forEach(Product::staticPriceUpdate);
+		 //List<String> names = list.stream().map(Product::staticUppercaseName).collect(Collectors.toList());
 		
 		//Primeira forma usando a classe que extend consumer(implementação de interface)
-		 //list.forEach(new PriceUpdate());
+		  //List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
 		 
-		list.forEach(System.out::println);
+		 names.forEach(System.out::println);
 	}
 }

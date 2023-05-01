@@ -2,9 +2,10 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
+import java.util.function.Consumer;
 
 import entities.Product;
+import util.PriceUpdate;
 
 public class Program {
 
@@ -19,24 +20,30 @@ public class Program {
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("HD Case", 80.00));
 		
-		//quarta forma , expressão lambda declarada
-		Double min = 100.00;
-		Predicate<Product> pred = p -> p.getPrice() >= min;
-		list.removeIf(pred);
+		//Quinta forma Expressão Lambda inline
+		double factor = 1.1;
 		
-		//terceira forma method não estático
-		//list.removeIf(Product::nonStaticProductPredicate);
+		list.forEach(produto -> produto.setPrice(produto.getPrice() * factor));
 		
-		//segunda forma method estático
-		//list.removeIf(Product::staticProductPredicate);
+		//Quarta forma Expressão Lambda Declarada
+		/**double factor = 1.1;
 		
-		//primeira forma usando a classe ProductPredicate implementação de interface
-		//list.removeIf(new ProductPredicate());
+		Consumer<Product> cons = p -> {
+			p.setPrice(p.getPrice() * factor);
+		};
 		
-		for(Product p : list) {
-			System.out.println(p);
-		}
+		list.forEach(cons);**/
 		
+		
+		//Terceira forma referência com method não estático(classe product)
+		 //list.forEach(Product::nonStaticPriceUpdate);
+		
+		//Segunda forma reference method com método estático(classe product)
+		 //list.forEach(Product::staticPriceUpdate);
+		
+		//Primeira forma usando a classe que extend consumer(implementação de interface)
+		 //list.forEach(new PriceUpdate());
+		 
+		list.forEach(System.out::println);
 	}
-
 }

@@ -17,8 +17,10 @@ public class Program {
 		list.add(new Product("Tablet", 450.00));
 		list.add(new Product("Celular", 350.00));
 		
-		// 2 segunda forma de fazer com implementação de classe anônima
+		// 2 segunda forma de fazer com implementação de função anônima - lambda
+		// p1 e p2 não foram declarados, são inferência de tipos
 		list.sort((p1,p2) ->  p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
+		
 		
 		/** 1- forma de comparar usando  a classe MyComparator
 		list.sort(new MyComparator()); **/
